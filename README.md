@@ -1,2 +1,2 @@
-# base-da-ccl
-Domain adaptation on the cancer cell line research
+# ml_template
+This is a template for a ML pytorch project

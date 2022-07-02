@@ -1,3 +1,5 @@
+# Copyright (c) 2022 Alix Routhier-Lalonde. Licence included in root of package.
+
 ARG VARIANT="3.10-bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 

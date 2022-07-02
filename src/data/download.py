@@ -1,13 +1,12 @@
+# Copyright (c) 2022 Alix Routhier-Lalonde. Licence included in root of package.
+
 """
 This module contains functions to download data.
 """
 
 from requests import get
 from src.utils import progress_bar
-
-BASE_PATH = "./src/data/source/"
-
-REQUEST_LIST = [("drugcomb.csv", "https://drugcomb.fimm.fi/jing/summary_v_1_5.csv")]
+from src.params import SOURCE_PATH, REQUEST_LIST
 
 
 def download():
@@ -29,7 +28,7 @@ def download_source(filename, url):
     """
     print(f"Downloading {filename} from {url}.")
     with get(url, stream=True) as resp:
-        with open(BASE_PATH + filename, "wb") as file:
+        with open(SOURCE_PATH + filename, "wb") as file:
             size = int(resp.headers.get("Content-Length"))
             chunk_size = 4096
             chunk_iter = int(size / (chunk_size * 100))

@@ -1,7 +1,7 @@
 # Copyright (c) 2022 Alix Routhier-Lalonde. Licence included in root of package.
 
 """
-Different utilities and helper functions.
+Parameters and constants folder
 """
 
-from .cmd import progress_bar, printc
+from .hyperparameters import *

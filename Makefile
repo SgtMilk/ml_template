@@ -1,3 +1,5 @@
+# Copyright (c) 2022 Alix Routhier-Lalonde. Licence included in root of package.
+
 # RUN COMMANDS
 
 train:
@@ -12,7 +14,13 @@ test:
 setup:
 	pip3 install -r requirements.txt
 
+docker-setup:
+	pip3 install -r ./.docker/requirements.txt
+
+fetch-data:
+	python3 setup.py
+
 # Requires pip-tools
-generate_reqs:
+generate-reqs:
 	pip-compile requirements.in
 	pip-compile ./.docker/requirements.in

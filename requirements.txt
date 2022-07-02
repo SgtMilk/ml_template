@@ -8,8 +8,6 @@ astroid==2.11.6
     # via pylint
 cfgv==3.3.1
     # via pre-commit
-colorama==0.4.5
-    # via pylint
 dill==0.3.5.1
     # via pylint
 distlib==0.3.4

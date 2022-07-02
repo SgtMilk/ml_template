@@ -1,3 +1,5 @@
+# Copyright (c) 2022 Alix Routhier-Lalonde. Licence included in root of package.
+
 [MASTER]
 init-hook='import sys; sys.path.append(".")'
 
@@ -5,5 +7,5 @@ init-hook='import sys; sys.path.append(".")'
 
 # List of members which are set dynamically and missed by Pylint inference
 # system, and so shouldn't trigger E1101 when accessed.
-; generated-members=numpy.*, torch.*
-disable=E0401, R0903
+generated-members=numpy.*, torch.*
+disable=E0401
