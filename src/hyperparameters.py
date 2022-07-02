@@ -1,26 +1,26 @@
-from torch.nn import MSELoss, BCELoss
-from torch.optim import Adam
+"""
+Contains the Params class, a collection for training parameters
+"""
 import torch
-
-# from src.model import RNN
 
 
 class Params:
+    """
+    Collection class for training parameters
+    """
+
     # device = torch.device("cpu")
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    no_download = True
 
-    look_back = 100
+    # MODEL PARAMETERS
+    # model =
+    # hidden_dim = 256
+    # num_dim = 4
+    # dropout = 0.4
+    # validation_split = 0.1
 
-    # model parameters
-    # model = RNN
-    hidden_dim = 256
-    num_dim = 4
-    dropout = 0.4
-    validation_split = 0.1
-
-    # training parameters
-    epochs = 150
-    learning_rate = 0.0001
-    loss = MSELoss(reduction="mean")
-    optimizer = Adam
+    # TRAINING PARAMETERS
+    # epochs = 150
+    # learning_rate = 0.0001
+    # loss = MSELoss(reduction="mean")
+    # optimizer = Adam

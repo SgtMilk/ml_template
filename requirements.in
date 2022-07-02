@@ -1,6 +1,2 @@
-torch
-torchvision
-tensorboard
-tensorflow
-numpy
 pre-commit
+pylint

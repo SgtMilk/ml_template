@@ -1,1 +1,5 @@
-from .progress_bar import progress_bar
+"""
+Different utilities and helper functions.
+"""
+
+from .cmd import progress_bar

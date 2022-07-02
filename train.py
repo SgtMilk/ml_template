@@ -1,6 +1,6 @@
-def train():
-    print("train")
-
+"""
+Runs the training loop.
+"""
 
 if __name__ == "__main__":
-    train()
+    print("train")
