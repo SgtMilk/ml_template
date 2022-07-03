@@ -4,7 +4,8 @@
 Python script to setup the repo. Will download the necessary source data.
 """
 
-from src.data import download, clean
+from src.data.download import download
+from src.data.clean import clean
 
 if __name__ == "__main__":
     download()

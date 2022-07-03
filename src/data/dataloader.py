@@ -93,12 +93,12 @@ class Dataloader:
         Returns the batch on the specified dataset.
         """
 
-        def __init__(self, dataset):
+        def __init__(self, dataset: torch.Tensor):
             """
             Sets the counter, max as well as the dataset of the iterator.
 
             Args:
-                dataset (torch cpu tensor): The dataset to iterate through.
+                dataset (torch.Tensor): The dataset to iterate through.
             """
             self.x_data = dataset[0]
             self.y_data = dataset[1]

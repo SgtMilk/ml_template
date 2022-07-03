@@ -4,6 +4,10 @@
 Contains the Params class, a collection for training parameters
 """
 import torch
+from torch.nn import MSELoss
+from torch.optim import Adam
+
+from src.model.linear_model import Linear
 
 
 # DEVICE = torch.device("cpu")
@@ -17,12 +21,15 @@ REQUEST_LIST = []
 BATCH_SIZE = 4096
 
 # ========== MODEL PARAMETERS ========== #
-# MODEL =
+MODEL = Linear
+MODEL_PATH = "./src/model/models/"
 VALIDATION_SPLIT = 0.1
 TEST_SPLIT = 0.1
 
 # ========== TRAINING PARAMETERS ========== #
-# EPOCHS =
-# LEARNING_RATE =
-# LOSS =
-# OPTIMIZER =
+EPOCHS = 100
+VERBOSITY_INTERVAL = 1
+LEARNING_RATE = 0.0001
+LOSS = MSELoss(reduction="mean")
+OPTIMIZER = Adam
+OPTIMIZER_BETAS = (0.5, 0.999)

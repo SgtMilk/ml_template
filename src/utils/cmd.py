@@ -6,11 +6,12 @@ This module contains different tools for the command line
 
 from sys import stdout
 from functools import reduce
+from typing import List
 
 BAR_LEN = 60
 
 
-def progress_bar(count, total, suffix=""):
+def progress_bar(count: int, total: int, suffix: str = ""):
     """
     Will print a progess bar and update it at each call.
 
@@ -29,7 +30,7 @@ def progress_bar(count, total, suffix=""):
     stdout.flush()
 
 
-def printc(text: str, style):
+def printc(text: str, style: List[str]):
     """
     This function prints a message in a certain style.
 

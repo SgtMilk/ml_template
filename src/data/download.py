@@ -5,7 +5,7 @@ This module contains functions to download data.
 """
 
 from requests import get
-from src.utils import progress_bar
+from src.utils.cmd import progress_bar
 from src.params import SOURCE_PATH, REQUEST_LIST
 
 
@@ -17,14 +17,14 @@ def download():
         download_source(filename, url)
 
 
-def download_source(filename, url):
+def download_source(filename: str, url: str):
     """
     Downloads the file data from a specified url and saves it in the source folder
     with the specified file name.
 
     Args:
-        filename (String): The file name to save the data into.
-        url (String): The url where to fetch the file data from.
+        filename (str): The file name to save the data into.
+        url (str): The url where to fetch the file data from.
     """
     print(f"Downloading {filename} from {url}.")
     with get(url, stream=True) as resp:
